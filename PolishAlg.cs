@@ -106,15 +106,10 @@ namespace LabWork3
                         res.Add(formula[i].ToString() + formula[i + 1].ToString());
                         i++;
                     }
-                    else if (i + 4 < formula.Length && operations.Contains(formula[i].ToString() + formula[i + 1].ToString() + formula[i + 2].ToString() + formula[i + 3].ToString()))
-                    {
-                        i += 4;
-                        res.Add(formula[i].ToString() + formula[i + 1].ToString() + formula[i + 2].ToString() + formula[i + 3].ToString());
-                    }
                     else if (i + 3 < formula.Length && operations.Contains(formula[i].ToString() + formula[i + 1].ToString() + formula[i + 2].ToString()) && formula[i + 3] == '(')
                     {
                         
-                        //res.Add(formula[i].ToString() + formula[i + 1].ToString() + formula[i + 2].ToString());
+                        
                         var j = i + 4;
                         var s = "";
                         while (formula[j] != ')')
