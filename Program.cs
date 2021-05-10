@@ -49,6 +49,18 @@ namespace LabWork3
             var t11 = new PolishAlg("tan(124-x/5)");
             if (t11.Transform() != "124,x,5,/,-,tan")
                 Console.WriteLine("Test 11 failed");
+
+            var t12 = new PolishAlg("x^5");
+            if (t12.Transform() != "x,5,^")
+                Console.WriteLine("Test 12 failed");
+
+            var t13 = new PolishAlg("x^5+7*8");
+            if (t13.Transform() != "x,5,^,7,8,*,+")
+                Console.WriteLine("Test 12 failed");
+
+            var t14 = new PolishAlg("x^y/(5*z)+10");
+            if (t14.Transform() != "x,y,^,5,z,*,/,10,+")
+                Console.WriteLine("Test 12 failed");
             Console.WriteLine("Hello World!");
         }
     }

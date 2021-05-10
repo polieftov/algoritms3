@@ -9,7 +9,7 @@ namespace LabWork3
     {
         private string brackets = "(){}[]";
         private string openBr = "({[";
-        private string operations = "+-/*=%sincostanctglog";
+        private string operations = "+-/*=%sincostanctglog^";
         public string formula;
 
         public PolishAlg(string _formula)
